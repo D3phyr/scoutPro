@@ -1,0 +1,33 @@
+.wrapper {
+  padding-bottom: rem(10);
+
+  @media screen and (width <= 450px) {
+    padding-bottom: rem(10);
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (width <= 450px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: rem(26);
+  line-height: rem(30);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: rem(40);
+}
+
+.trigger {
+  width: 100%;
+  height: rem(50);
+  background-color: transparent;
+  opacity: 0;
+}

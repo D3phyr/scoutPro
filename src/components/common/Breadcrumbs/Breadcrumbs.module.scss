@@ -1,0 +1,31 @@
+.wrapper {
+  margin-bottom: rem(40);
+}
+
+.link {
+  font-size: rem(12);
+  line-height: rem(14);
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &.active {
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.divider {
+  font-size: rem(12);
+  line-height: rem(14);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: rem(10);
+  margin-right: rem(10);
+}

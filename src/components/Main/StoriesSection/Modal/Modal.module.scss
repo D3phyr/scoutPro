@@ -1,0 +1,93 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #242424 0%, #121212 100%);
+  width: 100vw;
+
+  // min-height: 100vh;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(21);
+  overflow: hidden;
+
+  @media screen and (width <= 450px) {
+    margin-top: rem(38);
+  }
+}
+
+.close {
+  width: rem(40);
+  height: rem(40);
+  opacity: 1;
+  padding: rem(10) rem(10);
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 99;
+  position: relative;
+  background-image: url('../../../../assets/img/cross.svg');
+  background-repeat: no-repeat;
+  background-size: rem(20) rem(20);
+  background-position: center center;
+
+  @media (hover: hover) {
+    &:hover {
+      transition: opacity 0.3s ease;
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 1;
+      transform: scale(0.9);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+}
+
+.logo-wrapper {
+  width: rem(130);
+  height: rem(36);
+  display: inline-block;
+
+  @media screen and (width <= 450px) {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.logo {
+  height: 100%;
+}
+
+.slider {
+  top: 42%;
+  position: relative;
+  transform: translateY(-50%);
+
+  & :global(.swiper-slide) {
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+  }
+
+  & :global(.swiper-slide-active) {
+    transform: scale(1) !important;
+  }
+
+  @media screen and (height <= 500px) {
+    transform: unset;
+    top: 10%;
+  }
+
+  @media screen and (width <= 450px) {
+    transform: unset;
+    top: 5%;
+    height: rem(650);
+    padding-bottom: rem(20);
+    margin-bottom: rem(30);
+    width: 100vw;
+  }
+}

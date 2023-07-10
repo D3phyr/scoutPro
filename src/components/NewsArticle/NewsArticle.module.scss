@@ -1,0 +1,155 @@
+.wrapper {
+  padding-bottom: rem(100);
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: rem(42);
+  line-height: rem(49);
+  letter-spacing: -0.01em;
+  margin: 0;
+  margin-top: rem(40);
+}
+
+.inner {
+  display: flex;
+  align-items: stretch;
+}
+
+.left {
+  width: rem(690);
+
+  @media screen and (width <= 450px) {
+    width: 100%;
+  }
+}
+
+.right {
+  width: rem(420);
+  margin-left: rem(60);
+  position: relative;
+
+  @media screen and (width <= 450px) {
+    display: none;
+  }
+}
+
+.skeleton-wrapper {
+  height: 100%;
+}
+
+.image-wrapper {
+  height: 100%;
+
+  @media screen and (width <= 450px) {
+    max-height: rem(300);
+  }
+}
+
+.next-inner {
+  position: sticky;
+  top: rem(20);
+}
+
+.header {
+  margin-top: rem(30);
+}
+
+.header-text {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: rgb(255 255 255 / 50%);
+  margin-right: rem(43);
+}
+
+.content {
+  margin-top: rem(32);
+  overflow-wrap: break-word;
+
+  & h2 {
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: rem(33);
+    letter-spacing: -0.01em;
+  }
+
+  & p {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 1.5;
+    margin: 0;
+    margin-top: rem(30);
+
+    &:last-of-type {
+      &::after {
+        content: '';
+        display: inline-block;
+        width: rem(43);
+        height: rem(12);
+        background-image: url('../../assets/img/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: rem(10);
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  & a {
+    text-decoration: underline;
+  }
+
+  & li {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(21);
+    margin: 0;
+    margin-top: rem(20);
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: rem(30);
+  }
+}
+
+.next {
+  font-weight: 700;
+  font-size: rem(26);
+  line-height: rem(30);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card {
+  width: 100%;
+  margin-top: rem(40);
+}

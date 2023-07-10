@@ -1,0 +1,44 @@
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #2b2b2b;
+  display: inline-block;
+  padding: rem(13) rem(15) rem(12) rem(15);
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: rem(16);
+  height: rem(40);
+  transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-transform: uppercase;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #233aff;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.arrow {
+  position: relative;
+  padding: rem(13) rem(30) rem(12) rem(15);
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: rem(15);
+    transform: translateY(-50%);
+    width: rem(7);
+    height: rem(12);
+    background-image: url('../../../assets/img/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

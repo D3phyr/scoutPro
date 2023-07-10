@@ -1,0 +1,146 @@
+.container {
+  width: 100%;
+  height: rem(650);
+  background-color: #333;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+
+  &.active > div:first-child {
+    & > div:first-child {
+      padding: rem(15) !important;
+
+      & > div {
+        background-color: rgb(255 255 255 / 30%) !important;
+      }
+
+      & > div:last-child {
+        overflow-x: hidden;
+      }
+    }
+
+    & > div:last-child {
+      display: none !important;
+    }
+  }
+
+  @media screen and (width <= 450px) {
+    height: 100%;
+    overflow-y: auto;
+    width: rem(365);
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: rem(28);
+  letter-spacing: -0.01em;
+}
+
+.date {
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: rem(16);
+  color: rgb(255 255 255 / 50%);
+}
+
+.btn-left {
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+  width: rem(30);
+  height: rem(30);
+  position: absolute;
+  top: 50%;
+  left: -12%;
+  background-image: url('../../../../assets/img/story-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: rem(7) rem(12);
+  background-position: center center;
+  transform: rotate(180deg);
+  cursor: pointer;
+  border: none;
+
+  &:active {
+    transform: rotate(180deg) scale(0.9);
+    transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @media screen and (width <= 450px) {
+    display: none;
+  }
+}
+
+.btn-right {
+  outline: none;
+  background-color: #fff;
+  border-radius: 50%;
+  width: rem(30);
+  height: rem(30);
+  position: absolute;
+  top: 50%;
+  right: -12%;
+  background-image: url('../../../../assets/img/story-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: rem(7) rem(12);
+  background-position: center center;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @media screen and (width <= 450px) {
+    display: none;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.left-trigger {
+  display: none;
+
+  @media screen and (width <= 450px) {
+    display: block;
+    position: absolute;
+    inset: 0 50% 0 0;
+
+    // z-index: 9999;
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+}
+
+.right-trigger {
+  display: none;
+
+  @media screen and (width <= 450px) {
+    display: block;
+    position: absolute;
+    inset: 0 0 0 50%;
+
+    // z-index: 9999;
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+}

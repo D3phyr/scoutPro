@@ -1,0 +1,80 @@
+.story {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #000 0%, rgb(0 0 0 / 0%) 100%);
+  }
+}
+
+.inner {
+  margin-top: auto;
+  width: 100%;
+  padding: rem(20);
+  padding-bottom: rem(60);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  top: rem(0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: default;
+  transform: scale(1.01);
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.title {
+  position: relative;
+  z-index: 1001;
+  font-weight: 700;
+  font-size: rem(24);
+  line-height: rem(28);
+  letter-spacing: -0.01em;
+  cursor: default;
+  margin: 0;
+  pointer-events: none;
+}
+
+.text {
+  font-family: Roboto, sans-serif;
+  position: relative;
+  z-index: 1001;
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: rem(21);
+  cursor: default;
+  margin: 0;
+  margin-top: rem(10);
+  pointer-events: none;
+}
+
+.btn {
+  z-index: 1001;
+  position: relative;
+  background-color: #233aff;
+  text-transform: uppercase;
+  margin-top: rem(20);
+  transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

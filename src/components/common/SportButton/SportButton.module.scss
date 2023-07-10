@@ -1,0 +1,46 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  padding: rem(8) rem(20) rem(8) rem(16);
+  background: rgb(255 255 255 / 5%);
+  cursor: pointer;
+  height: rem(40);
+  margin-right: rem(20);
+  width: max-content;
+  transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #233aff;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &.active {
+    background-color: #233aff;
+  }
+
+  @media screen and (width <= 450px) {
+    &:first-child {
+      margin-left: rem(15);
+    }
+  }
+}
+
+.icon {
+  width: rem(26);
+  height: auto;
+  margin-right: rem(5);
+}
+
+.text {
+  color: #fff;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: rem(16);
+  margin-top: rem(3);
+}

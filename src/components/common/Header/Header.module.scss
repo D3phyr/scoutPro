@@ -1,0 +1,120 @@
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  padding-top: rem(33);
+  padding-bottom: rem(40);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @media screen and (width <= 450px) {
+    padding-bottom: rem(33);
+  }
+}
+
+.logo-wrapper {
+  width: rem(130);
+  height: rem(36);
+  display: inline-block;
+  position: absolute;
+
+  @media screen and (width <= 450px) {
+    position: static;
+  }
+}
+
+.logo {
+  height: 100%;
+}
+
+.menu {
+  margin: 0 auto;
+
+  @media screen and (width <= 450px) {
+    display: none;
+  }
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  @media screen and (width <= 450px) {
+    flex-direction: column;
+  }
+}
+
+.item {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: rem(16);
+  transition: opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:not(:last-child) {
+    margin-right: rem(60);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  // &:nth-of-type(1) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  // }
+
+  // &:nth-of-type(2) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 0.2s;
+  // }
+
+  // &:nth-of-type(3) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 0.4s;
+  // }
+
+  // &:nth-of-type(4) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 0.6s;
+  // }
+
+  // &:nth-of-type(5) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 0.8s;
+  // }
+
+  // &:nth-of-type(6) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 1s;
+  // }
+
+  // &:nth-of-type(7) {
+  //   opacity: 0;
+  //   animation: in 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  //   animation-delay: 1.2s;
+  // }
+}

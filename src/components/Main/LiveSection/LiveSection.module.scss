@@ -1,0 +1,128 @@
+.wrapper {
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (width <= 450px) {
+    flex-direction: column;
+  }
+}
+
+.header {
+  margin-bottom: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (width <= 450px) {
+    margin-bottom: rem(20);
+  }
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: rem(26);
+  line-height: rem(30);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.video-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: rem(825);
+
+  & :global(.video-react-play-progress) {
+    background-color: #233aff;
+  }
+
+  @media screen and (width <= 450px) {
+    width: 100%;
+  }
+}
+
+.right {
+  width: rem(515);
+
+  @media screen and (width <= 450px) {
+    width: 100%;
+    margin-top: rem(20);
+  }
+}
+
+.match-title {
+  font-weight: 700;
+  font-size: rem(28);
+  line-height: rem(33);
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin: 0;
+  margin-top: rem(20);
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.live {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: rem(12);
+  line-height: rem(14);
+  text-transform: uppercase;
+  align-self: start;
+  margin-top: rem(5);
+  padding-left: rem(20);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: rem(10);
+    height: rem(10);
+    background-color: #233aff;
+    border-radius: 50%;
+    animation: opacity 1s linear infinite;
+  }
+}
+
+.message {
+  min-height: rem(460);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-btn {
+  width: 100%;
+  margin-top: rem(20);
+  text-align: center;
+
+  &::after {
+    right: unset;
+    margin-left: rem(10);
+  }
+}

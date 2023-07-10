@@ -1,0 +1,160 @@
+.footer {
+  display: block;
+}
+
+.menu-wrapper {
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+
+  @media screen and (width <= 450px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.logo-wrapper {
+  width: rem(130);
+  height: rem(36);
+  display: inline-block;
+  position: absolute;
+
+  @media screen and (width <= 450px) {
+    position: static;
+  }
+}
+
+.logo {
+  height: 100%;
+}
+
+.menu {
+  margin: 0 auto;
+
+  @media screen and (width <= 450px) {
+    margin: 0;
+    margin-top: rem(30);
+  }
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+
+  @media screen and (width <= 450px) {
+    flex-wrap: wrap;
+    margin: 0;
+    row-gap: rem(30);
+  }
+}
+
+.item {
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: rem(14);
+  line-height: rem(16);
+  transition: opacity 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:not(:last-child) {
+    margin-right: rem(60);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (width <= 450px) {
+    margin: 0 !important;
+    flex-basis: 50%;
+  }
+}
+
+.bottom {
+  padding-top: rem(40);
+  padding-bottom: rem(30);
+  border-top: 1px solid rgb(255 255 255 / 10%);
+}
+
+.row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.note {
+  font-family: Roboto, sans-serif;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: rgb(255 255 255 / 50%);
+  width: rem(397);
+  margin: 0;
+
+  @media screen and (width <= 450px) {
+    width: 100%;
+  }
+}
+
+.contacts-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  width: rem(28);
+  height: auto;
+
+  &:not(:last-child) {
+    margin-right: rem(30);
+  }
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(40);
+}
+
+.copyright {
+  font-family: Roboto, sans-serif;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: rgb(255 255 255 / 50%);
+}
+
+.links-wrapper {
+  @media screen and (width <= 450px) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.link {
+  font-family: Roboto, sans-serif;
+  font-size: rem(12);
+  line-height: rem(14);
+  color: rgb(255 255 255 / 50%);
+  transition: color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  &:not(:last-child) {
+    margin-right: rem(40);
+  }
+
+  @media screen and (width <= 450px) {
+    margin-bottom: rem(20);
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: #fff;
+    }
+  }
+}

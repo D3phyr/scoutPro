@@ -1,0 +1,220 @@
+@keyframes slidein {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wrapper {
+  width: 100%;
+  border-bottom: rem(1) solid rgb(255 255 255 / 10%);
+}
+
+.container {
+  width: 100%;
+  height: rem(130);
+
+  // margin: 0 auto;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  & :global(.swiper-button-prev) {
+    display: none;
+  }
+
+  & :global(.swiper-button-next) {
+    display: none;
+  }
+
+  & :global(.swiper-slide) {
+    width: auto !important;
+
+    &:first-child > div {
+      margin-left: rem(50);
+    }
+
+    &:last-child {
+      margin-right: rem(70);
+    }
+
+    &:last-child > div > div {
+      border-right: unset;
+    }
+
+    &:last-child > div > div > div {
+      border-right: unset;
+    }
+  }
+
+  & :global(.swiper-wrapper) {
+    width: fit-content;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  .disabled {
+    transform: translateX(-100%);
+  }
+}
+
+.filter {
+  height: 100%;
+  width: rem(60);
+  display: flex;
+  flex-direction: column;
+  padding-top: rem(16);
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgb(34 34 34 / 10%);
+  backdrop-filter: blur(10px);
+}
+
+.button-container {
+  height: 100%;
+  width: rem(80);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgb(34 34 34 / 10%);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+
+  &.hidden {
+    display: none;
+  }
+
+  @media screen and (width <= 450px) {
+    display: none;
+  }
+}
+
+.button-arrow {
+  width: rem(14);
+  height: rem(24);
+  margin: rem(55) 0 rem(55) rem(21);
+  background-image: url('../../../assets/img/story-arrow-white.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+.swiper {
+  margin: rem(5) 0 rem(6);
+  width: 100%;
+
+  // transform: translateX(100vw);
+  // animation: slidein 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  // animation-delay: 1s;
+}
+
+.button {
+  width: rem(26);
+  height: rem(26);
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: rem(12);
+  line-height: rem(14);
+  transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  @media (hover: hover) {
+    &:not(.selected) {
+      cursor: pointer;
+
+      &:hover {
+        background-color: #233aff;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+}
+
+.row {
+  margin: 0 auto;
+  display: flex;
+}
+
+.button + .button {
+  margin-left: rem(10);
+}
+
+.row + .row {
+  margin-top: rem(5);
+}
+
+.colored {
+  background: rgb(255 255 255 / 10%);
+}
+
+.point {
+  width: rem(4);
+  height: rem(4);
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.point + .disabled-pannel {
+  margin: 0 rem(3);
+}
+
+.point + .active-pannel {
+  margin: 0 rem(1);
+}
+
+.sport-img {
+  width: rem(18);
+  height: auto;
+}
+
+.pannel {
+  background-color: rgb(34 34 34 / 10%);
+
+  // background-color: aqua;
+  backdrop-filter: blur(10px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: rem(16);
+  left: 0;
+  transition: transform 0.5s;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.current {
+  background: #233aff;
+}
+
+.main-btn {
+  background-image: url('../../../assets/img/panel-arrow.svg');
+  background-size: rem(9) rem(14);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main-btn-active {
+  background-image: url('../../../assets/img/panel-arrow-active.svg');
+  background-size: rem(9) rem(14);
+  background-repeat: no-repeat;
+  background-position: center center;
+}

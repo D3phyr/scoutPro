@@ -1,0 +1,50 @@
+.wrapper {
+  padding-top: rem(23);
+}
+
+.logo-wrapper {
+  width: rem(130);
+  height: rem(36);
+  display: inline-block;
+
+  @media screen and (width <= 450px) {
+    position: static;
+  }
+}
+
+.logo {
+  height: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: rem(26);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: rem(94);
+
+  @media screen and (width <= 450px) {
+    margin-top: rem(50);
+  }
+}
+
+.btn {
+  margin-top: rem(30);
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (width <= 450px) {
+    margin-top: rem(20);
+  }
+}
+
+.img {
+  width: rem(240);
+  height: rem(359);
+}

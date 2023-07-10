@@ -1,0 +1,48 @@
+.outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+
+  @media screen and (width <= 450px) {
+    max-width: 100%;
+    overflow-y: auto;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+  mask-image: linear-gradient(to right, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 100%) 95%, rgb(0 0 0 / 0%) 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  user-select: none;
+  padding-top: rem(30);
+  padding-bottom: rem(30);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & button {
+    &:last-child {
+      margin-right: rem(40);
+    }
+  }
+}
+
+.inner {
+  display: inline-flex;
+  white-space: pre;
+}
+
+.button-all {
+  margin-right: rem(20);
+
+  &.active {
+    background-color: #233aff;
+  }
+}

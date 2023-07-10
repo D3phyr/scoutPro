@@ -1,0 +1,121 @@
+@import 'normalize.css/normalize.css';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'video-react/styles/scss/video-react';
+@import 'fonts';
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading='lazy'] {
+    clip-path: inset(0.6px);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 1.1vw;
+
+  @media screen and (width >= 1440px) {
+    font-size: rem(16);
+  }
+
+  @media screen and (width <= 450px) {
+    font-size: 4vw;
+  }
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  background: linear-gradient(180deg, #242424 0%, #121212 100%) no-repeat, #121212;
+  color: #fff;
+
+  &:has(.video-react-fullscreen) {
+    overflow: hidden !important;
+    position: relative;
+    height: 100%;
+    touch-action: none;
+
+    @media screen and (width <= 450px) {
+      position: fixed;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  padding-inline-start: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: rem(30);
+  padding-right: rem(30);
+
+  @media screen and (width <= 450px) {
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* stylelint-disable selector-class-pattern */
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.video-react-control {
+  font-family: Roboto, sans-serif;
+}
+
+.body-scroll-disabled {
+  overflow: hidden !important;
+  position: relative;
+  height: 100%;
+  touch-action: none;
+
+  @media screen and (width <= 450px) {
+    position: fixed;
+  }
+}

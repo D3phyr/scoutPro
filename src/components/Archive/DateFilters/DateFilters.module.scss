@@ -1,0 +1,61 @@
+.outer {
+  @media screen and (width <= 450px) {
+    max-width: 100vw;
+    overflow-x: auto;
+    margin-bottom: rem(40);
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: rem(15);
+      right: rem(15);
+      height: 1px;
+      background-color: rgb(255 255 255 / 10%);
+    }
+
+    & .btn:first-child {
+      margin-left: rem(15);
+    }
+
+    & .btn:last-child {
+      margin-right: rem(15);
+      display: inline-block;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: rem(20) 0;
+  display: flex;
+
+  @media screen and (width <= 450px) {
+    display: block;
+    white-space: pre;
+  }
+}
+
+.sport {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: rem(21);
+  letter-spacing: -0.01em;
+  opacity: 0.5;
+  cursor: pointer;
+
+  @media screen and (width <= 450px) {
+    width: max-content;
+  }
+}
+
+.active {
+  background-color: #233aff !important;
+}
+
+.btn + .btn {
+  margin-left: rem(10);
+}

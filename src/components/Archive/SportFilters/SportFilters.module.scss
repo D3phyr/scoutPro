@@ -1,0 +1,66 @@
+.outer {
+  border-bottom: rem(1) solid rgb(255 255 255 / 10%);
+
+  @media screen and (width <= 450px) {
+    max-width: 100vw;
+    overflow-x: auto;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    border-bottom: unset;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: rem(15);
+      right: rem(15);
+      height: 1px;
+      background-color: rgb(255 255 255 / 10%);
+    }
+
+    & .sport:first-child {
+      padding-left: rem(15);
+    }
+
+    & .sport:last-child {
+      padding-right: rem(15);
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding-bottom: rem(20);
+  display: flex;
+
+  @media screen and (width <= 450px) {
+    display: inline-flex;
+    white-space: pre;
+  }
+}
+
+.sport {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: rem(21);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  cursor: pointer;
+
+  @media screen and (width <= 450px) {
+    width: max-content;
+  }
+}
+
+.active {
+  opacity: 1;
+  text-underline-offset: rem(23);
+  text-decoration: underline;
+  text-decoration-thickness: rem(2);
+}
+
+.sport + .sport {
+  margin-left: rem(30);
+}

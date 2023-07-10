@@ -1,0 +1,48 @@
+.section {
+  padding-top: rem(40);
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  width: 100%;
+}
+
+.header {
+  margin-bottom: rem(40);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (width <= 450px) {
+    margin-bottom: rem(20);
+  }
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  font-size: rem(26);
+  line-height: rem(30);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: rem(10);
+
+  @media screen and (width <= 450px) {
+    gap: rem(20);
+  }
+}
+
+.mobile-btn {
+  width: 100%;
+  margin-top: rem(20);
+  text-align: center;
+
+  &::after {
+    right: unset;
+    margin-left: rem(10);
+  }
+}
